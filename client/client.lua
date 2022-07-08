@@ -78,7 +78,7 @@ CreateThread(function()
           type = "client",
           event = "prspre:client:openmenu",
           icon = 'fas fa-shield-halved',
-          targeticon = "fas fa-building-shield", -- Remove this line too not change the eye into this icon.
+          targeticon = "fas fa-building-shield", -- Remove this line to get the normal eye when using third eye.
           label = 'Policepack - System',
           job = "police",
         }
