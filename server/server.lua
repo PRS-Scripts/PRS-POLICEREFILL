@@ -7,8 +7,8 @@ AddEventHandler('prs-policerefill:starter', function()
     local Player = QBCore.Functions.GetPlayer(src)
         
     if Config.ChargeOfficer then
-        if Player.PlayerData.money['cash'] >= Config.StarterCost then
-            Player.Functions.RemoveMoney('cash', Config.StarterCost)
+        if Player.PlayerData.money[Config.TakeMyMoney] >= Config.StarterCost then
+            Player.Functions.RemoveMoney(Config.TakeMyMoney, Config.StarterCost)
             exports['qb-management']:AddMoney("police", Config.StarterCost)
 
             TriggerClientEvent('QBCore:Notify', source, 'You gear is being sorted, please wait..', 'primary', 5000)
@@ -65,8 +65,8 @@ AddEventHandler('prs-policerefill:advanced', function()
     local Player = QBCore.Functions.GetPlayer(src)
         
     if Config.ChargeOfficer then
-        if Player.PlayerData.money['cash'] >= Config.AdvancedCost then
-            Player.Functions.RemoveMoney('cash', Config.AdvancedCost)
+        if Player.PlayerData.money[Config.TakeMyMoney] >= Config.AdvancedCost then
+            Player.Functions.RemoveMoney(Config.TakeMyMoney, Config.AdvancedCost)
             exports['qb-management']:AddMoney("police", Config.AdvancedCost)
 
             TriggerClientEvent('QBCore:Notify', source, 'You gear is being sorted, please wait..', 'primary', 5000)
@@ -131,8 +131,8 @@ AddEventHandler('prs-policerefill:healing', function()
     local Player = QBCore.Functions.GetPlayer(src)
         
     if Config.ChargeOfficer then
-        if Player.PlayerData.money['cash'] >= Config.HealingCost then
-            Player.Functions.RemoveMoney('cash', Config.HealingCost)
+        if Player.PlayerData.money[Config.TakeMyMoney] >= Config.HealingCost then
+            Player.Functions.RemoveMoney(Config.TakeMyMoney, Config.HealingCost)
             exports['qb-management']:AddMoney("police", Config.HealingCost)
 
             TriggerClientEvent('QBCore:Notify', source, 'You gear is being sorted, please wait..', 'primary', 5000)
